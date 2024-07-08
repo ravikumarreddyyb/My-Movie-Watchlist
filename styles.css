@@ -1,0 +1,159 @@
+body {
+    background-image: url("bg.jpeg");
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    color: #444;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1, h2 {
+    font-weight: normal;
+}
+
+#wrapper {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 90%;
+    max-width: 960px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 1px 10px 20px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    padding: 20px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    backdrop-filter: blur(10px);
+}
+
+#page-banner {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 30px 0;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+#page-banner:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("image-4.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    z-index: -1; /* Place behind the content */
+    border-radius: 10px 10px 0 0;
+}
+
+#page-banner h1, #page-banner p {
+    width: 100%;
+    margin: 10px 0;
+}
+
+#movie-list, #add-movie {
+    margin: 30px 0;
+}
+
+#movie-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#movie-list li {
+    padding: 20px;
+    border-left: 5px solid #ddd;
+    margin: 20px 0;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#movie-list li:hover {
+    border-color: #9361bf;
+    transform: translateX(10px);
+    background-color: #f7f7f7;
+}
+
+.delete {
+    float: right;
+    background: #ff4d4d;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    transition: background 0.3s ease;
+}
+
+.delete:hover {
+    background: #e60000;
+}
+
+#add-movie {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+#add-movie input {
+    display: block;
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    border-radius: 4px 0 0 4px;
+    box-sizing: border-box;
+    width: calc(100% - 100px);
+    float: left;
+    clear: both;
+}
+
+#add-movie button {
+    border: 1px solid green;
+    background: green;
+    padding: 10px 20px;
+    font-size: 16px;
+    display: inline-block;
+    margin: 0;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    width: 100px;
+    float: left;
+    margin: 20px 0;
+    border-left: 0;
+    color: white;
+    transition: background 0.3s ease;
+}
+
+#add-movie button:hover {
+    background: darkgreen;
+}
+
+#add-movie:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#add-movie label {
+    line-height: 52px;
+}
+
+
+#scroll{
+    max-height: 400px; /* Example height; adjust as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Hide horizontal scrollbar if it appears */
+}
